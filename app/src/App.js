@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { loadcompany } from "./actions/company";
 import { loadrevenue } from "./actions/revenue";
@@ -10,6 +10,8 @@ import { Row, Button, Col, Container } from "react-bootstrap";
 import "./App.css";
 
 import List from "./components/List";
+import Layer from "./components/Layer";
+import BottomLayer from "./components/BottomLayer";
 
 const App = ({ loadcompany, loadrevenue, lists, details }) => {
   useEffect(() => {
@@ -19,8 +21,21 @@ const App = ({ loadcompany, loadrevenue, lists, details }) => {
 
   return (
     <div>
-      <List lists={lists} details={details} />
-      {/* */}
+      <Row>
+        <Col className="layer">
+          <Layer />
+          <div className="layer1">
+            {" "}
+            <BottomLayer />
+          </div>
+        </Col>
+        <Col>
+          <h1>App</h1>
+          <div className="ScrollDiv">
+            <List lists={lists} details={details} />
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };

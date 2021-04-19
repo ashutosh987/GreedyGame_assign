@@ -22,32 +22,48 @@ const Details = ({ company, details }) => {
           <Container>
             <Row>
               <Col>
-                <div> Total Cost</div>
+                <p>Total Cost</p>
+
                 <div>
                   {}
                   <b>${details[company.id].sum("revenue")}</b>
                 </div>
               </Col>
               <Col>
-                <div> Ad Request</div>
-                <div>
-                  {" "}
-                  <b>{details[company.id].sum("adRequest")}</b>
-                </div>
-              </Col>
-              <Col>
-                <div> Ad Response</div>
-                <div>
-                  {" "}
-                  <b>{details[company.id].sum("adResponse")}</b>
-                </div>
-              </Col>
-              <Col>
-                <div> Impression</div>
+                <p>Ad Req</p>
 
                 <div>
                   {" "}
-                  <b>{details[company.id].sum("impressions")}</b>
+                  <b>
+                    {Math.floor(details[company.id].sum("adRequest") / 1000000)}
+                    M
+                  </b>
+                </div>
+              </Col>
+              <Col>
+                <p>Ad Res</p>
+
+                <div>
+                  {" "}
+                  <b>
+                    {Math.floor(
+                      details[company.id].sum("adResponse") / 1000000
+                    )}
+                    M
+                  </b>
+                </div>
+              </Col>
+              <Col>
+                <p> Impression</p>
+
+                <div>
+                  {" "}
+                  <b>
+                    {Math.floor(
+                      details[company.id].sum("impressions") / 1000000
+                    )}
+                    M
+                  </b>
                 </div>
               </Col>
             </Row>
