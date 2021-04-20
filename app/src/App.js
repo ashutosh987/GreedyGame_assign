@@ -4,7 +4,7 @@ import { loadcompany } from "./actions/company";
 import { loadrevenue } from "./actions/revenue";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Row, Button, Col, Container } from "react-bootstrap";
+import { Row, Button, Col, Container, Image } from "react-bootstrap";
 // Redux
 
 import "./App.css";
@@ -17,7 +17,7 @@ const App = ({ loadcompany, loadrevenue, lists, details }) => {
   useEffect(() => {
     loadrevenue();
     loadcompany();
-  }, []);
+  }, [loadrevenue, loadcompany]);
 
   return (
     <div>
@@ -30,10 +30,13 @@ const App = ({ loadcompany, loadrevenue, lists, details }) => {
           </div>
         </Col>
         <Col>
-          <h1>App</h1>
-          <div className="ScrollDiv">
-            <List lists={lists} details={details} />
-          </div>
+          <Container>
+            <h1>Apps</h1>
+
+            <div className="ScrollDiv">
+              <List lists={lists} details={details} />
+            </div>
+          </Container>
         </Col>
       </Row>
     </div>

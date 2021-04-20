@@ -10,7 +10,7 @@ import { Row, Button, Col, Container, Image } from "react-bootstrap";
 const Layer = () => {
   return (
     <div className="layer">
-      <div className="title">
+      <div className="title1">
         <b>
           A {}D{} S{} O{} U {} L
         </b>

@@ -1,6 +1,6 @@
 body{
   font-family: 'Nunito', sans-serif;
-  padding: 50px;
+
 }
 .card1{
     
@@ -55,6 +55,15 @@ body{
   margin-top: 10px;
   margin-left: 25px;
 }
+.title2{
+  
+  color:#fff;
+  font-size: large;
+  font-weight: 500;
+  padding-top: 2%;
+
+ 
+}
 .fontcolor{
   color: #fff;
 }
@@ -77,4 +86,23 @@ body{
   float:left;
  
   height:calc(100vh - 40px);
+}
+.side-img1{
+  float: left;
+  height: 60px;
+  width: 60px;
+ 
+
+  clear: both;
+  background-color: blue;
+}
+.margintop{
+  margin-bottom: 5%;
+}
+.arrow{
+  font-size:50px;
+
+}
+#dec{
+  text-decoration:none;
 }

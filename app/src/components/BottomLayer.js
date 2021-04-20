@@ -25,7 +25,7 @@ const BottomLayer = () => {
           </div>
           <div className="m-5">
             <Image src={pic2} />
-            <div className="m-2">Fill Rate</div>
+            <div className="m-2">Improve CTR</div>
           </div>
         </Col>
 
@@ -33,12 +33,12 @@ const BottomLayer = () => {
           <div className="m-5">
             {" "}
             <Image src={pic3} />
-            <div className="m-2">Fill Rate</div>
+            <div className="m-2">Refresh Rate</div>
           </div>
           <div className="m-5">
             {" "}
             <Image src={pic4} />
-            <div className="m-2">Fill Rate</div>
+            <div className="m-2">Quick Integration</div>
           </div>
         </Col>
       </Row>

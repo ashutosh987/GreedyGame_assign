@@ -13,16 +13,26 @@ const Details = ({ company, details }) => {
     <div>
       <div>
         <div className="card1 ">
-          <div className="side-img"></div>
+          <span className="arrow" style={{ float: "right" }}>
+            <a href={`/details/${company.id}`} id="dec">
+              &#8618;
+            </a>
+          </span>
 
-          <h3>
-            <b>{company.appName}</b>
-          </h3>
+          <h5>
+            <b>
+              <div style={{ float: "inline" }}>
+                {" "}
+                <div className="side-img"></div>
+                <div>{company.appName}</div>
+              </div>
+            </b>
+          </h5>
           <div className="m-5"></div>
           <Container>
             <Row>
               <Col>
-                <p>Total Cost</p>
+                <p> Cost</p>
 
                 <div>
                   {}
